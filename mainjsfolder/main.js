@@ -367,7 +367,25 @@ var combine = [ ageLuis, ageJunior, oldtimer, myDadsAge];
 console.log(combine);
 
 //Second function
+//NOTE: parameters for the function below are given when the function is called.
 function yearsUntillRetirement(year, firstName) {
   var age = calculateAge(year);
   var retirement = 65 - age;
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log(firstName + ' is already retired and enjoying the break!');
+  }
+
 }
+//NOTE: This is how we make our code work for the second function. After setting up our function we call it at the end and all the code will start running based on the parameters we give as seen below.
+yearsUntillRetirement(1992, 'Luis');
+// Now we will call yearsUntillRetirement a couple more times to have different answers.
+yearsUntillRetirement(1968, 'Dad');
+// console.log(firstName + ' retires in ' + retirement + ' years.');
+yearsUntillRetirement(1988, 'Karla');
+// console.log(firstName + ' retires in ' + retirement + ' years.');
+yearsUntillRetirement(1993, 'Junior');
+// console.log(firstName + ' retires in ' + retirement + ' years.');
+//NOTE: IMPORTANT! with the code above as i called the function yearsUntillRetirement i as well tried to log it into the console and when i coded it after every time i called the function and opened up the console it would give me an error saying that firstName was not defined. By commenting it out i found out that since the function yearsUntillRetirement already has a console.log(); inside of it there is no need to call out to get a log into the console again.
+yearsUntillRetirement(1940, 'Grandpa');
