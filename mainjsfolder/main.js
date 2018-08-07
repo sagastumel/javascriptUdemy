@@ -389,3 +389,58 @@ yearsUntillRetirement(1993, 'Junior');
 // console.log(firstName + ' retires in ' + retirement + ' years.');
 //NOTE: IMPORTANT! with the code above as i called the function yearsUntillRetirement i as well tried to log it into the console and when i coded it after every time i called the function and opened up the console it would give me an error saying that firstName was not defined. By commenting it out i found out that since the function yearsUntillRetirement already has a console.log(); inside of it there is no need to call out to get a log into the console again.
 yearsUntillRetirement(1940, 'Grandpa');
+
+//Function Statements and Expressions Section 2, Lecture 21
+
+//NOTE: Function Declaration
+//Declararion: A declared function is "saved for later use", and will be executed later, when it is invoked(called). It must begin with the word function. ALso it can be called from anywhere just as long as it has some parameters that it will run.
+// function whatDoYouDo(job, firstName){
+// }
+//EXAMPLE of Declaration. **** Not part of the UDEMY Course Material ****
+//alert(foo()); // Output ALerts 5. Declarations are loaded before any code can run.
+//function foor( { return 5;})
+
+//NOTE: Function Expression
+//Function Expressions "CAN ONLY" be stored in a variable. Will only run after its variable has been given its value.
+//var whatDoYouDo = function(job, firstName){
+//}
+//EXAMPLE of Expression. **** Not part of the UDEMY Course Material ****
+//alert(foo()); // ERROR! foo wasn't loaded yearsUntillRetirement//var foo = function() { return 5;}
+
+var whatDoYouDo = function (job, firstName) {
+  switch (job) {
+    case 'teacher':
+        return firstName + ' teaches kids how to code.';
+      //break; NOTE: *** IMPORTANT when using "return" this is no need for a break because return will stop the function.
+    case 'driver':
+        return firstName + ' drives a cab in California.';
+    case 'designer':
+        return firstName + ' designs beautiful websites.';
+    default:
+        return firstName + ' does something else.'
+
+  }
+}
+//Now we call the function.
+//NOTE: calling out the function like this saves us time by only having to write the code only once and only needing to call it afterwords when we need it.
+console.log(whatDoYouDo('teacher', 'Karla'));
+console.log(whatDoYouDo('driver', 'Junior'));
+console.log(whatDoYouDo('designer', 'Jazmine'));
+//parameters are written as data types, numbers, string, boolens etc.. etc..
+console.log(whatDoYouDo('Web-Developer', 'Luis'));
+//Works as well iwth alert as shown below.
+//NOTE: alert(whatDoYouDo('wev-Developer', 'Luis')); //NOTE: IMPORTANT! If you run the alert with only whatDoYouDo without the parameters it will output all the code for the function whatDoYouDo. Good idea for giving answers on a quiz app or for pop up help.
+//Works as well with prompt as shown below.
+prompt(whatDoYouDo('Web-Developer', 'Luis'));// NOTE: Requires input with prompts but you still get an answer.
+
+// ARRAYS Section 2, Lecture 22
+// arrays are like collections for variables
+//array use brackets
+var names = ['Luis', 'Junior', 'Lalo'];
+var years = new Array(1990, 1969, 1948);
+
+//NOTE: var array[1,2,3]; and new Array(1,2,3); do the exact same thing. There is no speed difference.
+//arrays start from 0 and not 1
+console.log(names[0]);// returns the 0 index inout of the array which is luis. 
+console.log(names);// returns the full array
+console.log(names.length);// returns how many datatypes ore in the array.
