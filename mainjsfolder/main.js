@@ -393,7 +393,7 @@ yearsUntillRetirement(1940, 'Grandpa');
 //Function Statements and Expressions Section 2, Lecture 21
 
 //NOTE: Function Declaration
-//Declararion: A declared function is "saved for later use", and will be executed later, when it is invoked(called). It must begin with the word function. ALso it can be called from anywhere just as long as it has some parameters that it will run.
+//Declararion: A declared function is "saved for later use", and will be executed later, when it is invoked(called). It must begin with the word function. Also it can be called from anywhere just as long as it has some parameters that it will run.
 // function whatDoYouDo(job, firstName){
 // }
 //EXAMPLE of Declaration. **** Not part of the UDEMY Course Material ****
@@ -436,11 +436,57 @@ prompt(whatDoYouDo('Web-Developer', 'Luis'));// NOTE: Requires input with prompt
 // ARRAYS Section 2, Lecture 22
 // arrays are like collections for variables
 //array use brackets
+//Initialize new array
 var names = ['Luis', 'Junior', 'Lalo'];
 var years = new Array(1990, 1969, 1948);
 
 //NOTE: var array[1,2,3]; and new Array(1,2,3); do the exact same thing. There is no speed difference.
 //arrays start from 0 and not 1
-console.log(names[0]);// returns the 0 index inout of the array which is luis. 
+console.log(names[0]);// returns the 0 index input of the array which is luis.
 console.log(names);// returns the full array
 console.log(names.length);// returns how many datatypes ore in the array.
+//changing one of my inputs in my array.
+//Mutate array data
+names[1] = 'Jazmine';
+console.log(names);
+//adding inputs intop the array. NOTE: input 3 and 4 do not have anything and inout five does.
+names[1] = 'Jazmine';
+names[5] = '4 and 5 are missing! GASP!';
+console.log(names);
+
+//Different data types
+var luis = ['Luis', 'Sagastume', 1992, 'Coder'];
+//Some methods for arrays
+luis.push('red');// will add a element to the END of the array.
+console.log(luis);
+luis.unshift('Mr.');//will add an element to the begining to the array.
+console.log(luis);
+luis.pop(); // will removes the last element from the end of the array.
+console.log(luis);
+luis.shift();// will remove the first element of an array.
+console.log(luis);
+luis.indexOf(1992);// will give of the possition of the value inside the array.
+//NOTE: out will be 2 for the code above.
+luis.indexOf('not in the array'); // this will return -1 because it is not located in the array.
+//NOTE: Using .indexOf is a good way to find out if the element is in the array.
+
+// Ternary example used in the Udemy course.
+//NOTE: The way the code below works is as followed: luis.indexOf is looking for designer in the array. Because it is not in the array it will come back -1 and continue the line of code. Now that -1 does === to -1 the line of code will run and give us 'Luis is NOT a dedigner.' That in return will be asigned to isDesigner and will be logged into the console.
+var isDesigner = luis.indexOf('designer') === -1 ? 'Luis is NOT a designer' : ' Luis IS a designer';
+console.log(isDesigner);
+
+// CODING CHALLENGE 3 Section 2, Lecture 23
+
+var myTips = function(bill) {
+  var tip = [0.2, 0.15, 0.1];// tip percentage in decimals.
+  if (bill < 50) {
+    console.log(bill * tip[0]);
+  } else if (bill >= 50 && bill <= 200){
+    console.log(bill + tip[1]);
+  } else {
+    console.log(bill * tip[2]);
+  }
+}
+
+console.log(myTips(124));
+// TODO: Fix this codiong challenge. 
