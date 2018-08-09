@@ -115,7 +115,7 @@
 // console.log(x);//NOTE: will be 62
 //
 //
-// // NOTE: CODING CHALLENGE!! :)
+// // NOTE: CODING CHALLENGE #1!! :)
 //
 // var luisHeight, luisMass, juniorHeight, juniorMass;
 //
@@ -351,44 +351,44 @@
 // NOTE: Functions are like variables. They need a name given to them just like we do when we use a var.
 // NOTE: The code below reads as follows:
 //function : name of function : (argument of the function){ the code for the function block }
-function calculateAge(birthYear) {
-  return 2018 - birthYear;
-}
+// function calculateAge(birthYear) {
+//   return 2018 - birthYear;
+// }
 
 //calculateAge(1992); // This is how we call the function. 1992 will be input into birthYear continuing the line of code for the return making it 2018 - 1992.
 // NOTE: Now we asign the function to a variable to save the new data (output from the return of the function.)
-var ageLuis = calculateAge(1992);
-var ageJunior = calculateAge(1993);
-var oldtimer = calculateAge(1903);
-var myDadsAge = calculateAge(1960);
-console.log(ageLuis);
+// var ageLuis = calculateAge(1992);
+// var ageJunior = calculateAge(1993);
+// var oldtimer = calculateAge(1903);
+// var myDadsAge = calculateAge(1960);
+// console.log(ageLuis);
 //NOTE: The array below was just a test of extra code i decided ton play around with. When looked on the console it will give us all the ages of the variables using the function calculateAge.
-var combine = [ ageLuis, ageJunior, oldtimer, myDadsAge];
-console.log(combine);
+// var combine = [ ageLuis, ageJunior, oldtimer, myDadsAge];
+// console.log(combine);
 
 //Second function
 //NOTE: parameters for the function below are given when the function is called.
-function yearsUntillRetirement(year, firstName) {
-  var age = calculateAge(year);
-  var retirement = 65 - age;
-  if (retirement > 0) {
-    console.log(firstName + ' retires in ' + retirement + ' years.');
-  } else {
-    console.log(firstName + ' is already retired and enjoying the break!');
-  }
-
-}
+// function yearsUntillRetirement(year, firstName) {
+//   var age = calculateAge(year);
+//   var retirement = 65 - age;
+//   if (retirement > 0) {
+//     console.log(firstName + ' retires in ' + retirement + ' years.');
+//   } else {
+//     console.log(firstName + ' is already retired and enjoying the break!');
+//   }
+//
+// }
 //NOTE: This is how we make our code work for the second function. After setting up our function we call it at the end and all the code will start running based on the parameters we give as seen below.
-yearsUntillRetirement(1992, 'Luis');
+//yearsUntillRetirement(1992, 'Luis');
 // Now we will call yearsUntillRetirement a couple more times to have different answers.
-yearsUntillRetirement(1968, 'Dad');
+//yearsUntillRetirement(1968, 'Dad');
 // console.log(firstName + ' retires in ' + retirement + ' years.');
-yearsUntillRetirement(1988, 'Karla');
+//yearsUntillRetirement(1988, 'Karla');
 // console.log(firstName + ' retires in ' + retirement + ' years.');
-yearsUntillRetirement(1993, 'Junior');
+//yearsUntillRetirement(1993, 'Junior');
 // console.log(firstName + ' retires in ' + retirement + ' years.');
 //NOTE: IMPORTANT! with the code above as i called the function yearsUntillRetirement i as well tried to log it into the console and when i coded it after every time i called the function and opened up the console it would give me an error saying that firstName was not defined. By commenting it out i found out that since the function yearsUntillRetirement already has a console.log(); inside of it there is no need to call out to get a log into the console again.
-yearsUntillRetirement(1940, 'Grandpa');
+//yearsUntillRetirement(1940, 'Grandpa');
 
 //Function Statements and Expressions Section 2, Lecture 21
 
@@ -398,7 +398,7 @@ yearsUntillRetirement(1940, 'Grandpa');
 // }
 //EXAMPLE of Declaration. **** Not part of the UDEMY Course Material ****
 //alert(foo()); // Output ALerts 5. Declarations are loaded before any code can run.
-//function foor( { return 5;})
+//function foo( { return 5;})
 
 //NOTE: Function Expression
 //Function Expressions "CAN ONLY" be stored in a variable. Will only run after its variable has been given its value.
@@ -407,86 +407,215 @@ yearsUntillRetirement(1940, 'Grandpa');
 //EXAMPLE of Expression. **** Not part of the UDEMY Course Material ****
 //alert(foo()); // ERROR! foo wasn't loaded yearsUntillRetirement//var foo = function() { return 5;}
 
-var whatDoYouDo = function (job, firstName) {
-  switch (job) {
-    case 'teacher':
-        return firstName + ' teaches kids how to code.';
-      //break; NOTE: *** IMPORTANT when using "return" this is no need for a break because return will stop the function.
-    case 'driver':
-        return firstName + ' drives a cab in California.';
-    case 'designer':
-        return firstName + ' designs beautiful websites.';
-    default:
-        return firstName + ' does something else.'
-
-  }
-}
+// var whatDoYouDo = function (job, firstName) {
+//   switch (job) {
+//     case 'teacher':
+//         return firstName + ' teaches kids how to code.';
+//       //break; NOTE: *** IMPORTANT when using "return" this is no need for a break because return will stop the function.
+//     case 'driver':
+//         return firstName + ' drives a cab in California.';
+//     case 'designer':
+//         return firstName + ' designs beautiful websites.';
+//     default:
+//         return firstName + ' does something else.'
+//
+//   }
+// }
 //Now we call the function.
 //NOTE: calling out the function like this saves us time by only having to write the code only once and only needing to call it afterwords when we need it.
-console.log(whatDoYouDo('teacher', 'Karla'));
-console.log(whatDoYouDo('driver', 'Junior'));
-console.log(whatDoYouDo('designer', 'Jazmine'));
+// console.log(whatDoYouDo('teacher', 'Karla'));
+// console.log(whatDoYouDo('driver', 'Junior'));
+// console.log(whatDoYouDo('designer', 'Jazmine'));
 //parameters are written as data types, numbers, string, boolens etc.. etc..
-console.log(whatDoYouDo('Web-Developer', 'Luis'));
+//console.log(whatDoYouDo('Web-Developer', 'Luis'));
 //Works as well iwth alert as shown below.
 //NOTE: alert(whatDoYouDo('wev-Developer', 'Luis')); //NOTE: IMPORTANT! If you run the alert with only whatDoYouDo without the parameters it will output all the code for the function whatDoYouDo. Good idea for giving answers on a quiz app or for pop up help.
 //Works as well with prompt as shown below.
-prompt(whatDoYouDo('Web-Developer', 'Luis'));// NOTE: Requires input with prompts but you still get an answer.
+//prompt(whatDoYouDo('Web-Developer', 'Luis'));// NOTE: Requires input with prompts but you still get an answer.
 
 // ARRAYS Section 2, Lecture 22
 // arrays are like collections for variables
 //array use brackets
 //Initialize new array
-var names = ['Luis', 'Junior', 'Lalo'];
-var years = new Array(1990, 1969, 1948);
-
-//NOTE: var array[1,2,3]; and new Array(1,2,3); do the exact same thing. There is no speed difference.
-//arrays start from 0 and not 1
-console.log(names[0]);// returns the 0 index input of the array which is luis.
-console.log(names);// returns the full array
-console.log(names.length);// returns how many datatypes ore in the array.
-//changing one of my inputs in my array.
-//Mutate array data
-names[1] = 'Jazmine';
-console.log(names);
-//adding inputs intop the array. NOTE: input 3 and 4 do not have anything and inout five does.
-names[1] = 'Jazmine';
-names[5] = '4 and 5 are missing! GASP!';
-console.log(names);
-
-//Different data types
-var luis = ['Luis', 'Sagastume', 1992, 'Coder'];
-//Some methods for arrays
-luis.push('red');// will add a element to the END of the array.
-console.log(luis);
-luis.unshift('Mr.');//will add an element to the begining to the array.
-console.log(luis);
-luis.pop(); // will removes the last element from the end of the array.
-console.log(luis);
-luis.shift();// will remove the first element of an array.
-console.log(luis);
-luis.indexOf(1992);// will give of the possition of the value inside the array.
+// var names = ['Luis', 'Junior', 'Lalo'];
+// var years = new Array(1990, 1969, 1948);
+//
+// //NOTE: var array[1,2,3]; and new Array(1,2,3); do the exact same thing. There is no speed difference.
+// //arrays start from 0 and not 1
+// console.log(names[0]);// returns the 0 index input of the array which is luis.
+// console.log(names);// returns the full array
+// console.log(names.length);// returns how many datatypes ore in the array.
+// //changing one of my inputs in my array.
+// //Mutate array data
+// names[1] = 'Jazmine';
+// console.log(names);
+// //adding inputs intop the array. NOTE: input 3 and 4 do not have anything and inout five does.
+// names[1] = 'Jazmine';
+// names[5] = '4 and 5 are missing! GASP!';
+// console.log(names);
+//
+// //Different data types
+// var luis = ['Luis', 'Sagastume', 1992, 'Coder'];
+// //Some methods for arrays
+// luis.push('red');// will add a element to the END of the array.
+// console.log(luis);
+// luis.unshift('Mr.');//will add an element to the begining to the array.
+// console.log(luis);
+// luis.pop(); // will removes the last element from the end of the array.
+// console.log(luis);
+// luis.shift();// will remove the first element of an array.
+// console.log(luis);
+//luis.indexOf(1992);// will give of the possition of the value inside the array.
 //NOTE: out will be 2 for the code above.
-luis.indexOf('not in the array'); // this will return -1 because it is not located in the array.
+//luis.indexOf('not in the array'); // this will return -1 because it is not located in the array.
 //NOTE: Using .indexOf is a good way to find out if the element is in the array.
 
 // Ternary example used in the Udemy course.
 //NOTE: The way the code below works is as followed: luis.indexOf is looking for designer in the array. Because it is not in the array it will come back -1 and continue the line of code. Now that -1 does === to -1 the line of code will run and give us 'Luis is NOT a dedigner.' That in return will be asigned to isDesigner and will be logged into the console.
-var isDesigner = luis.indexOf('designer') === -1 ? 'Luis is NOT a designer' : ' Luis IS a designer';
-console.log(isDesigner);
+// var isDesigner = luis.indexOf('designer') === -1 ? 'Luis is NOT a designer' : ' Luis IS a designer';
+// console.log(isDesigner);
+//
+// // CODING CHALLENGE 3 Section 2, Lecture 23
+//
+// var myTips = function(bill, tip) {
+//
+//   if (bill <= 50) {
+//     console.log(bill * tip);
+//   } else if (bill >= 50 && bill <= 200){
+//     console.log(bill * tip);
+//   } else {
+//     console.log(bill * tip);
+//   }
+// }
+//
+// console.log(myTips(48, 0.2));
+// console.log(myTips(124, 0.15));
+// console.log(myTips(268, 0.1));
+// // TODO: Fix this coding challenge.
+//
+// var tipPercent = [0.2, 0.15, 0.1];// tip percentage in decimals.
+// var billAfterTip = [58, 143, 295];
+// //NOTE: My salution worked.. The code below will be the teachers solution
+//
+// function tipCalculator(bill){
+//   var percentage;
+//   if (bill < 50) {
+//     percentage = .2;
+//   } else if (bill >= 50 && bill < 200){
+//     percentage = .15;
+//   } else {
+//     percentage = .1;
+//   }
+//   return percentage * bill;
+// }
+//
+// var bills = [124, 48, 268];
+// var tips = [tipCalculator(bills[0]),
+//             tipCalculator(bills[1]),
+//             tipCalculator(bills[2])];
+// var finalValues = [bills[0] + tips[0],
+//                    bills[1] + tips[1],
+//                    bills[2] + tips[2]];
+//
+// console.log(tips, finalValues);
 
-// CODING CHALLENGE 3 Section 2, Lecture 23
 
-var myTips = function(bill) {
-  var tip = [0.2, 0.15, 0.1];// tip percentage in decimals.
-  if (bill < 50) {
-    console.log(bill * tip[0]);
-  } else if (bill >= 50 && bill <= 200){
-    console.log(bill + tip[1]);
-  } else {
-    console.log(bill * tip[2]);
+// OBJECT AND PROPERTIES Section, Lecture 25
+
+// objects are with curly braces {}
+//NOTE: Object Literal --- means we will use curly brackets {};
+var luis = {
+  firstName: 'Luis',// this is called a key value pair.
+  lastName: 'Sagastume',
+  birthYear: 1992,
+  family: ['Junior', 'Jazmine', 'Lalo', 'Joe'], //Objects can hold arrays
+  job: 'Coder',
+  isMarried: false
+};
+console.log(luis); //NOTE: To target specific key value pairs from this object you just have to use the dot notation as shown below.
+console.log(luis.lastName);// dot sagastume or .sagastume is considered dot notation.
+console.log(luis['lastName']);// NOTE: you as well can target key value pairs by using brackets and targeting the key value pair by putting it inside quotation marks. 'lastName' or "lastName". This is the same as dot notation.
+var x = 'birthYear';
+console.log(luis[x]);//NOTE: In this example we are giving the variable x the value of birthYear which in return gets the value of 1992.
+
+//Changing the objects values
+luis.job = 'designer'; // must have the quotation marks
+luis['isMarried'] = true; // must have the quotation marks
+console.log(luis);
+
+//NOTE: new Object Syntax -- new object Syntax means that we will not use curly breaces but instead the round brackets ().
+//what we are doing with the code below is filling up the new object with its key value pairs. As well NOTE that when using 'new' Object() it must have the (). So basically var lalo = neqw object(); is the same as var lalo {insert key value pairs in here.}
+var lalo = new Object();
+lalo.name = 'Lalo';
+lalo.birthYear = 2001;
+lalo['lastName'] = 'Perdomo';
+console.log(lalo);
+
+//OBJECTS AND METHODS Section2, Lecture 26
+//Functions attached to objects are considered methods.
+//Only objects have methods.
+
+var luis = {
+  firstName: 'Luis',// this is called a key value pair.
+  lastName: 'Sagastume',
+  birthYear: 1992,
+  family: ['Junior', 'Jazmine', 'Lalo', 'Joe'], //Objects can hold arrays
+  job: 'Coder',
+  isMarried: false,
+  calcAge: function(birthYear) { // This is the function inside the object.
+    return 2018 - birthYear;
+  },
+  calcAge: function() { // This function does the same as the function above.
+    return 2018 - this.birthYear; // Output will be the same as the function above.
+  },
+  calcAge: function() { // This linew of code creates age and ask for an answer.
+    this.age = 2018 - this.birthYear;
   }
-}
+};
 
-console.log(myTips(124));
-// TODO: Fix this codiong challenge. 
+console.log(luis.calcAge(1992));
+
+luis.age = luis.calcAge();// this line of code gets the answer from the function and is asigned to it.
+luis.calcAge();// this calls the function calcAge
+console.log(luis);// this will show my my object but with age as a new key value pair
+
+
+//CODING CHALLENGE 4 Section 2, Lecture 27
+
+
+var luis = {    //methods are functions inside an object
+  firstName: 'Luis', //key value pairs
+  lastName: 'Sagastume Perdomo',
+  mass: 124,
+  height: 1.6,
+  calcBMI: function(){
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+luis.calcBMI(); //NOTE: This is how we call a fnction to start working. Without this the function will not run and the console.log(luis.bmi); will not have its answer and will only come out undefined. GREAT JOB LUIS!!!!!!
+console.log(luis.bmi);
+
+var junior = {
+  firstName: 'Junior', //key value pairs
+  lastName: 'Sagastume Perdomo',
+  mass: 140,
+  height: 1.5,
+  calcBMI: function(){
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+junior.calcBMI();
+console.log(junior.bmi);
+
+console.log(junior.firstName + ' has a higher BMI than ' + luis.firstName + ' because his BMI is ' + junior.bmi + ' and luis\'s BMI is ' + luis.bmi + '.');
+
+// The if else statement below was just extra code i wanted to mess around with and it came out perfect!
+if (luis.bmi > junior.bmi) {
+  console.log(luis.firstName + ' ' +  luis.lastName + ' is the brother with the higher BMI that is ' + luis.bmi + '.');
+} else if (junior.bmi > luis.bmi){
+  console.log(junior.firstName + ' ' + junior.lastName + ' is the brother with the higher BMI that totals ' + junior.bmi + '.');
+} else {
+  console.log('They both most likely have the same BMI. ');
+};
