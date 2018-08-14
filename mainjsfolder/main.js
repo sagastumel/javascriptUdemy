@@ -619,3 +619,79 @@ if (luis.bmi > junior.bmi) {
 } else {
   console.log('They both most likely have the same BMI. ');
 };
+
+
+
+//LOOPS AND ITERATIONS Sections 2, Lecture 28
+
+//For Loops run the same code over and over again without writing multiple lines of the same code.
+
+for (var i = 0; i < 10; i++) { //this for loop will give me numbers 1 through 9.
+  console.log(i);
+};
+//You can use for loops to run arrays.
+
+var luis = ['Luis', 'Sagastume', 1992, 'Coder', false];
+
+console.log(luis[0]);
+console.log(luis[1]);
+console.log(luis[2]);
+console.log(luis[3]);
+console.log(luis[4]);
+
+//Both the code above and below do the same thing. But it is more practicle and effective to use the forloop that is below as it only requires less code.
+
+for (var i = 0; i < luis.length; i++) {
+  console.log(luis[i]);
+};
+//Aside from forloops there is as well one called the WHILE LOOP. NOTE: For while loops we only need to pass the condition which is i < luis.length; from the forloop.
+
+var i = 0;//NOTE: While loops have their variables stated outside of the line of code as seen below.
+while (i < luis.length) {
+  console.log(luis[i]);//NOTE: Whithin the while loop you can add the i++ to add a number after every loop.
+  i++
+};
+
+// Continue and Break Statments
+//NOTE: Break Statment - Break statements are used to get out of a loop.
+//NOTE: Continue Statement Continue statements are used to quit the current iteration of the loop and continue with the next one.
+
+//THIS IS A CONTINUE STATEMENT
+var luis = ['Luis', 'Sagastume', 1992, 'Coder', false];
+
+for (var i = 0; i < luis.length; i++) {
+  if (typeof luis[i] !== 'string') continue;//NOTE: The way this line of code works is that it used the typeof operator and finds out what part of the luis array is not a string. If it not a string it continues looping through the array and logs them in when it find them.
+  console.log(luis[i]);
+};
+//NOTE: There are two ways you can write the Continue Statement. As seen below and above there are two ways that i have typed them up. The one above uses the circle brackets and the one below uses the curly brackets. The curly brackets are normal when it comes to using the if/ else statement but because we only need one line of code for the if statement we can use the circle brackets and add the continue statement outside of the circle brackets. As for the code below if we had more than one line of code needed for the if statement then we will use the curly brackets and as well add the continue statement inside the brackets as shown below. Both the continue statements from above and below do the same thing.
+for (var i = 0; i < luis.length; i++) {
+  if (typeof luis[i] !== 'string'){
+      continue;
+    };
+  console.log(luis[i]);
+};
+
+//Break Statement
+//NOTE: What the break statement does is that if it incounters a value that is not the same as what we are requesting it will break out of the loop. As shown below the if statement is using a break statement that is requesting to break out only if the luis array does not have a string. So basically if while running throught the array something other than a string is found the break statement will work and stop the loop. // GREAT NOTES LUIS :D
+for (var i = 0; i < luis.length; i++) {
+  if (typeof luis[i] !== 'string') break;
+  console.log(luis[i])
+};
+
+//Reversing through the luis array.
+var luis = ['Luis', 'Sagastume', 1992, 'Coder', false];
+//Full array logged in reverse. 
+for (var i = luis.length - 1; i >= 0; i-- ) {
+  //if (typeof luis[i] !== 'string') continue;
+  console.log(luis[i]);
+};
+//Continue Statemens in Reverse
+for (var i = luis.length - 1; i >= 0; i-- ) {
+  if (typeof luis[i] !== 'string') continue;
+  console.log(luis[i]);
+}
+//Break Statements ibn Reverse
+for (var i = luis.length - 1; i >= 0; i-- ) {
+  if (typeof luis[i] !== 'string') break;
+  console.log(luis[i]);
+}
