@@ -362,7 +362,7 @@
 // var oldtimer = calculateAge(1903);
 // var myDadsAge = calculateAge(1960);
 // console.log(ageLuis);
-//NOTE: The array below was just a test of extra code i decided ton play around with. When looked on the console it will give us all the ages of the variables using the function calculateAge.
+//NOTE: The array below was just a test of extra code i decided to play around with. When looked on the console it will give us all the ages of the variables using the function calculateAge.
 // var combine = [ ageLuis, ageJunior, oldtimer, myDadsAge];
 // console.log(combine);
 
@@ -449,7 +449,7 @@
 // //Mutate array data
 // names[1] = 'Jazmine';
 // console.log(names);
-// //adding inputs intop the array. NOTE: input 3 and 4 do not have anything and inout five does.
+// //adding inputs intop the array. NOTE: input 3 and 4 do not have anything and input five does.
 // names[1] = 'Jazmine';
 // names[5] = '4 and 5 are missing! GASP!';
 // console.log(names);
@@ -465,7 +465,7 @@
 // console.log(luis);
 // luis.shift();// will remove the first element of an array.
 // console.log(luis);
-//luis.indexOf(1992);// will give of the possition of the value inside the array.
+//luis.indexOf(1992);// will give of the position of the value inside the array.
 //NOTE: out will be 2 for the code above.
 //luis.indexOf('not in the array'); // this will return -1 because it is not located in the array.
 //NOTE: Using .indexOf is a good way to find out if the element is in the array.
@@ -680,7 +680,7 @@ for (var i = 0; i < luis.length; i++) {
 
 //Reversing through the luis array.
 var luis = ['Luis', 'Sagastume', 1992, 'Coder', false];
-//Full array logged in reverse. 
+//Full array logged in reverse.
 for (var i = luis.length - 1; i >= 0; i-- ) {
   //if (typeof luis[i] !== 'string') continue;
   console.log(luis[i]);
@@ -689,9 +689,120 @@ for (var i = luis.length - 1; i >= 0; i-- ) {
 for (var i = luis.length - 1; i >= 0; i-- ) {
   if (typeof luis[i] !== 'string') continue;
   console.log(luis[i]);
-}
+};
 //Break Statements ibn Reverse
 for (var i = luis.length - 1; i >= 0; i-- ) {
   if (typeof luis[i] !== 'string') break;
   console.log(luis[i]);
+};
+
+//CODING CHALLENGE 5
+//we have to use a For Loop with an if / else statement.
+//John's Family
+var bill = {
+  totalBills : [124, 48, 268, 180, 42]
+};
+
+  var tipAmount = [];
+  var totalBillPrice = [];
+
+ for (var i = 0; i < bill.totalBills.length; i++) {
+  if (bill.totalBills[i] < 50) {
+      var tip = (bill.totalBills[i] * 0.2);
+      console.log(tip);
+      //tipAmount.push(bill.totalBills[i] * 0.2);
+      tipAmount.push(tip);
+      totalBillPrice.push(tip + bill.totalBills[i]); //TODO: Try to add the final result of adding the tip and the bill into the new array of totalBillPrice
+  } else if (bill.totalBills[i] > 50 && bill.totalBills[i] < 200){
+      var tip = (bill.totalBills[i] * 0.15);
+      tipAmount.push(tip);
+      //console.log(tip);
+      totalBillPrice.push(tip + bill.totalBills[i]);
+  } else if (bill.totalBills[i] > 200){
+      var tip = (bill.totalBills[i] * 0.10 );
+      tipAmount.push(tip);
+      //console.log(tip);
+      totalBillPrice.push(tip + bill.totalBills[i])
+      console.log(tip + bill.totalBills[i]);
+  } else {
+    console.log('I dont know what else i can do currently.');
+  };
+   //console.log(bill.totalBills[i]);
+ }
+
+ //CODING CHALLENGE 5 PART TWO
+ //Marks Family
+ //create a tip calculator using functions
+var billCost = [77, 375, 110, 45];
+var marksFamily = [] //tips were added into this empty array using the dot push on marksFamilyTips as shown below.
+
+var marksVacation = function(bill){
+for (var i = 0; i < bill.length; i++) {
+    if (bill[i] < 100) {
+      //console.log(bill[i] * 0.20);
+      marksFamily.push(bill[i] * 0.20);
+    } else if (bill[i] > 100 && bill[i] < 300){
+      //console.log(bill[i] * 0.10);
+      marksFamily.push(bill[i] * 0.10);
+    } else {       //NOTE: If i add one more else if to this code it might remove the undefined value when we log the function into the concole.
+      //console.log(bill[i] * .25);
+      marksFamily.push(bill[i] * 0.25);
+    }
+  };
+}
+console.log(marksVacation(billCost));
+
+//Now create a function that will get the average paid in tips from John's family and Marks family. After that find out who paid the most in average tips.
+//Note to do this you must add the tip amount and devide by the number of tips.
+var johnsFamilyTip = tipAmount;
+console.log(johnsFamilyTip); // all the tips for johns family.
+var marksFamilyTips = marksFamily;
+console.log(marksFamilyTips);// all the tips for marks family.
+
+//NOTE: TOTAL SUM OF TIPS FOR JOHNS FAMILY
+var sum = 0; // used stackoverflow for help insolving the addition of numbers in an array.
+
+var familyTipAverage = []; //NOTE: calling the familyTipAveragehere first will stop any errors from accuring when trying to add the values later on. // Not really needed since i made a seperate variable for each johns and marks fmaily to hold their individual tip averages down below.
+
+var marksAverageTip = [];
+var johnsAverageTip = [];
+
+var averageTip = function(johnsFamilyTip){
+  for (var i = 0; i < johnsFamilyTip.length; i++) {
+     console.log(johnsFamilyTip[i]);
+     //console.log(marksFamilyTips[i]);
+     sum = sum + johnsFamilyTip[i];
+  }
+  console.log(sum);
+  familyTipAverage.push(sum / 5); // Both this code and the code below do the same thing.
+  familyTipAverage.push(sum / johnsFamilyTip.length);// NOTE: this would be the better one to use just incase you dont know how many values are in the array
+  johnsAverageTip.push(sum / johnsFamilyTip.length);
+}
+console.log(averageTip(johnsFamilyTip));
+console.log(johnsAverageTip);
+//NOTE: TOTAL SUM OF TIPS FOR MARKS FAMILY
+
+var sum = 0; // used stackoverflow for help insolving the addition of numbers in an array.
+
+
+var averageTip = function(marksFamilyTips){
+  for (var i = 0; i < marksFamilyTips.length; i++) {
+     console.log(marksFamilyTips[i]);
+     //console.log(marksFamilyTips[i]);
+     sum = sum + marksFamilyTips[i];
+  }
+  console.log(sum);
+  familyTipAverage.push(sum / 4) // Both this code and the code below do the same thing.
+  familyTipAverage.push(sum / marksFamilyTips.length) // NOTE: this would be the better one to use just incase you dont know how many values are in the array.
+  marksAverageTip.push(sum / marksFamilyTips.length);
+}
+console.log(averageTip(marksFamilyTips));
+console.log(familyTipAverage);
+
+//Final part to Coding Challenge Number 5 -- Logging the final result into the console.
+
+if (johnsAverageTip > marksAverageTip) {
+    console.log('John\'s family pays the most when it comes to average tip.' );
+} else {
+  console.log('Mark\'s family is the one that pays the most average tip.');
 }
